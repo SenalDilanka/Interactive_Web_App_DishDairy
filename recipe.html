@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DishDiary | Recipe</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo/DishDiary_logo.png" alt="DishDiary logo" class="site-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="recipe.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link" href="tips.html">Cooking Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-recipe.html">Add Recipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+        <a href="login.html" class="btn custom-btn">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-banner text-center">
+    <div class="container">
+      <h1 class="fw-bold" id="recipeTitle">Classic Creamy Pasta</h1>
+      <p id="recipeDescription">Simple ingredients, rich flavor, and easy preparation.</p>
+      <a href="#recipeCatalogSection" class="btn btn-light mt-2">Browse All Recipes</a>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <img id="recipeMainImage" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" class="img-fluid rounded shadow-sm" alt="Pasta dish">
+        </div>
+        <div class="col-lg-6">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="recipe-meta-chip" id="recipeCategory">Dinner</span>
+            <span class="recipe-meta-chip" id="recipePrepTime">30 minutes</span>
+            <span class="recipe-meta-chip" id="recipeServingSize">Serves 2-3 people</span>
+          </div>
+
+          <h3>Ingredients</h3>
+          <ul class="recipe-list" id="recipeIngredients">
+            <li>250g pasta</li>
+            <li>2 tbsp olive oil</li>
+            <li>2 garlic cloves</li>
+            <li>1 cup cream</li>
+            <li>1/2 cup parmesan cheese</li>
+            <li>Salt and pepper</li>
+            <li>Fresh parsley</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h3>Instructions</h3>
+          <ol class="recipe-list" id="recipeInstructions">
+            <li>Boil pasta in salted water until al dente.</li>
+            <li>Heat olive oil in a pan and sauté chopped garlic.</li>
+            <li>Add cream and stir well over low heat.</li>
+            <li>Mix in parmesan cheese until smooth.</li>
+            <li>Add pasta to the sauce and coat evenly.</li>
+            <li>Season with salt, pepper, and parsley before serving.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light-soft" id="recipeCatalogSection">
+    <div class="container">
+      <h2 class="section-title text-center mb-3">Browse Recipes</h2>
+      <p class="text-center mb-4">Filter by meal type and open any recipe for full ingredients and step-by-step cooking instructions.</p>
+      <div class="recipe-filter-bar mb-4" id="recipeFilterBar">
+        <button class="btn recipe-filter-btn active" type="button" data-filter="all">All</button>
+        <button class="btn recipe-filter-btn" type="button" data-filter="breakfast">Breakfast</button>
+        <button class="btn recipe-filter-btn" type="button" data-filter="lunch">Lunch</button>
+        <button class="btn recipe-filter-btn" type="button" data-filter="dinner">Dinner</button>
+        <button class="btn recipe-filter-btn" type="button" data-filter="dessert">Dessert</button>
+      </div>
+      <div class="row g-4" id="recipeCatalog"></div>
+      <p class="text-center d-none mt-4" id="recipeCatalogEmpty">No recipes found for this category.</p>
+    </div>
+  </section>
+
+  <section class="newsletter-section text-center">
+    <div class="container">
+      <h2 class="mb-3">Subscribe to DishDiary</h2>
+      <p class="mb-4">Get the latest recipes and cooking tips directly to your inbox.</p>
+      <form class="row justify-content-center g-2">
+        <div class="col-md-6">
+          <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-dark btn-lg">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer-section py-4">
+    <div class="container text-center">
+      <a href="index.html" class="footer-logo-link d-inline-block mb-3">
+        <img src="images/logo/DishDiary_logo.png" alt="DishDiary logo" class="footer-logo">
+      </a>
+      <p class="mb-2">Your digital recipe companion.</p>
+      <div class="mb-3">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="recipe.html" class="footer-link">Recipes</a>
+        <a href="tips.html" class="footer-link">Tips</a>
+        <a href="about.html" class="footer-link">About</a>
+      </div>
+      <p class="mb-0">© 2026 DishDiary. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
